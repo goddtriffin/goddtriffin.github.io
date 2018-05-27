@@ -7,7 +7,15 @@ const pics = [
     "sousa5kheldup.jpg",
     "sousa5kfinishedpose.jpg",
     "sousa5kfinishedheldup.jpg"
-]
+];
 
-const profilePicture = document.getElementById('profilePicture');
-profilePicture.src = "res/" + pics[0];
+document.addEventListener('DOMContentLoaded', function() {
+    setProfilePicture(0);
+}, false);
+
+function setProfilePicture(which) {
+    const profilePicture = document.getElementById('profilePicture');
+    
+    profilePicture.onload = centerVertically;
+    profilePicture.src = "res/" + pics[which];
+}
