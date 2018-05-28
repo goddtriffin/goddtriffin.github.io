@@ -9,10 +9,10 @@ const pics = [
     "sousa5kfinishedheldup.jpg"
 ];
 
-let picsNotChosen = [];
+const picShowOrder = getPicShowOrder();
+let pic = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    initPicsNotChosen();
     setProfilePicture();
 
     setInterval(function() {
@@ -20,23 +20,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
 }, false);
 
-function initPicsNotChosen() {
-    picsNotChosen = [];
-
+function getPicShowOrder() {
+    let inOrder = [];
     for (let i=0; i<pics.length; i++) {
-        picsNotChosen.push(i);
+        inOrder.push(i);
     }
+
+    let realOrder = [];
+    while (inOrder.length > 0) {
+        const randPic = getRandInt(0, inOrder.length-1);
+        realOrder.push(inOrder[randPic]);
+        inOrder.splice(randPic, 1);
+    }
+
+    return realOrder;
 }
 
 function setProfilePicture() {
     const profilePicture = document.getElementById('profilePicture');
     profilePicture.onload = centerVertically;
 
-    const picNotChosen = getRandInt(0, picsNotChosen.length-1);
-    profilePicture.src = "res/img/" + pics[picNotChosen];
+    profilePicture.src = "res/img/" + pics[picShowOrder[pic++]];
 
-    picsNotChosen.splice(picNotChosen, 1);
-    if (picsNotChosen.length === 0) initPicsNotChosen();
+    if (pic > picShowOrder.length - 1) pic = 0;
 }
 
 function getRandInt (min, max) {
