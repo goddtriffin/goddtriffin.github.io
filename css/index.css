@@ -21,12 +21,3 @@
     color: rgba(0, 0, 0, 0.6);
     text-rendering: optimizeLegibility;
 }
-
-i {
-    letter-spacing: .25em;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-i:hover {
-    color: #4f4f4f;
-}

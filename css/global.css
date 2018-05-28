@@ -16,3 +16,12 @@
 .circle {
     border-radius: 50%;
 }
+
+#links i {
+    letter-spacing: .25em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#links i:hover {
+    color: #4f4f4f;
+}
