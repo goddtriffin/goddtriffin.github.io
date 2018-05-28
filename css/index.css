@@ -1,0 +1,32 @@
+#name {
+    font-family: "Varela Round", sans-serif;
+    font-size: 25px;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 400;
+    font-style: normal;
+    color: #4f4f4f;
+    text-rendering: optimizeLegibility;
+}
+
+#roles {
+    font-family: "Varela Round", sans-serif;
+    font-size: 20px;
+    line-height: 1.6em;
+    text-transform: none;
+    letter-spacing: 0em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.6);
+    text-rendering: optimizeLegibility;
+}
+
+i {
+    letter-spacing: .25em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+i:hover {
+    color: #4f4f4f;
+}

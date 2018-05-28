@@ -17,5 +17,5 @@ function setProfilePicture(which) {
     const profilePicture = document.getElementById('profilePicture');
     
     profilePicture.onload = centerVertically;
-    profilePicture.src = "res/" + pics[which];
+    profilePicture.src = "res/img/" + pics[which];
 }
