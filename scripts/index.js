@@ -9,15 +9,34 @@ const pics = [
     "sousa5kfinishedheldup.jpg"
 ];
 
+let picsNotChosen = [];
+
 document.addEventListener('DOMContentLoaded', function() {
-    setProfilePicture(getRandInt(0, pics.length-1));
+    initPicsNotChosen();
+    setProfilePicture();
+
+    setInterval(function() {
+        setProfilePicture();
+    }, 5000);
 }, false);
 
-function setProfilePicture(which) {
+function initPicsNotChosen() {
+    picsNotChosen = [];
+
+    for (let i=0; i<pics.length; i++) {
+        picsNotChosen.push(i);
+    }
+}
+
+function setProfilePicture() {
     const profilePicture = document.getElementById('profilePicture');
-    
     profilePicture.onload = centerVertically;
-    profilePicture.src = "res/img/" + pics[which];
+
+    const picNotChosen = getRandInt(0, picsNotChosen.length-1);
+    profilePicture.src = "res/img/" + pics[picNotChosen];
+
+    picsNotChosen.splice(picNotChosen, 1);
+    if (picsNotChosen.length === 0) initPicsNotChosen();
 }
 
 function getRandInt (min, max) {
