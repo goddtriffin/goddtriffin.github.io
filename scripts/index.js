@@ -10,7 +10,7 @@ const pics = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-    setProfilePicture(0);
+    setProfilePicture(getRandInt(0, pics.length-1));
 }, false);
 
 function setProfilePicture(which) {
@@ -18,4 +18,11 @@ function setProfilePicture(which) {
     
     profilePicture.onload = centerVertically;
     profilePicture.src = "res/img/" + pics[which];
+}
+
+function getRandInt (min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
