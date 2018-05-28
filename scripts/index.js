@@ -9,18 +9,18 @@ const pics = [
     "sousa5kfinishedheldup.jpg"
 ];
 
-const picShowOrder = getPicShowOrder();
+const profilePictureShowOrder = getProfilePictureShowOrder();
 let pic = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-    setProfilePicture();
+    updateProfilePicture();
 
     setInterval(function() {
-        setProfilePicture();
-    }, 5000);
+        updateProfilePicture();
+    }, 8000);
 }, false);
 
-function getPicShowOrder() {
+function getProfilePictureShowOrder() {
     let inOrder = [];
     for (let i=0; i<pics.length; i++) {
         inOrder.push(i);
@@ -36,13 +36,31 @@ function getPicShowOrder() {
     return realOrder;
 }
 
-function setProfilePicture() {
-    const profilePicture = document.getElementById('profilePicture');
-    profilePicture.onload = centerVertically;
+function updateProfilePicture() {
+    const real = document.getElementById('profilePicture');
+    if (!profilePicture.src) {
+        profilePicture.onload = centerVertically;
+        profilePicture.src = "res/img/" + pics[profilePictureShowOrder[pic++]];
+        return;
+    }
 
-    profilePicture.src = "res/img/" + pics[picShowOrder[pic++]];
+    const faded = document.getElementById('profilePictureFader');
+    faded.src = "res/img/" + pics[profilePictureShowOrder[pic++]];
+    if (pic > profilePictureShowOrder.length - 1) pic = 0;
 
-    if (pic > picShowOrder.length - 1) pic = 0;
+    let faderOpacity = 0;
+    var timer = setInterval(function() {
+        if (faderOpacity >= 1) {
+            clearInterval(timer);
+
+            real.src = faded.src;
+            faded.style.opacity = 0;
+        }
+
+        faded.style.opacity = faderOpacity;
+        faded.style.filter = 'alpha(opacity=' + faderOpacity * 100 + ")";
+        faderOpacity += 0.01;
+    }, 10);
 }
 
 function getRandInt (min, max) {
