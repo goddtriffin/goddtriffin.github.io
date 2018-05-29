@@ -59,8 +59,8 @@ function updateProfilePicture() {
 
         faded.style.opacity = faderOpacity;
         faded.style.filter = 'alpha(opacity=' + faderOpacity * 100 + ")";
-        faderOpacity += 0.01;
-    }, 10);
+        faderOpacity += 0.05;
+    }, 50);
 }
 
 function getRandInt (min, max) {
