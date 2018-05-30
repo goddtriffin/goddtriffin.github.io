@@ -45,6 +45,7 @@ function updateProfilePicture() {
     }
 
     const faded = document.getElementById('profilePictureFader');
+    faded.style.opacity = 0;
     faded.src = "res/img/" + pics[profilePictureShowOrder[pic++]];
     if (pic > profilePictureShowOrder.length - 1) pic = 0;
 
@@ -55,6 +56,7 @@ function updateProfilePicture() {
 
             real.src = faded.src;
             faded.style.opacity = 0;
+            return;
         }
 
         faded.style.opacity = faderOpacity;
