@@ -40,13 +40,13 @@ function updateProfilePicture() {
     const real = document.getElementById('profilePicture');
     if (!profilePicture.src) {
         profilePicture.onload = centerVertically;
-        profilePicture.src = "res/img/" + pics[profilePictureShowOrder[pic++]];
+        profilePicture.src = "res/image/" + pics[profilePictureShowOrder[pic++]];
         return;
     }
 
     const faded = document.getElementById('profilePictureFader');
     faded.style.opacity = 0;
-    faded.src = "res/img/" + pics[profilePictureShowOrder[pic++]];
+    faded.src = "res/image/" + pics[profilePictureShowOrder[pic++]];
     if (pic > profilePictureShowOrder.length - 1) pic = 0;
 
     let faderOpacity = 0;
