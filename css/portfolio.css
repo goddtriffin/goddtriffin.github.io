@@ -1,3 +1,89 @@
+* {
+    position: relative;
+}
+
 #links {
+    z-index: 0;
+    padding-top: 10px;
     padding-bottom: 20px;
+    background-color: rgb(230, 230, 230);
+}
+
+#projects div {
+    height: 700px;
+    margin-top: -8%;
+}
+
+#projects div * {
+    z-index: 1;
+}
+
+/* skew, w/ less space to the left */
+#projects .littleLeft {
+    transform: skewY(4deg);
+    transform-origin: top right;
+}
+
+/* unskew, w/ less space to the left */
+#projects .littleLeft * {
+    transform: skewY(-4deg);
+}
+
+/* skew, w/ less space to the right */
+#projects .littleRight {
+    transform: skewY(-4deg);
+    transform-origin: top left;
+}
+
+/* skew, w/ less space to the right */
+#projects .littleRight * {
+    transform: skewY(4deg);
+}
+
+#quack {
+    z-index: -1;
+    background-color: rgb(0, 123, 103);
+}
+
+#quack #icon {
+    width: 10%;
+    padding-top: 20%;
+}
+
+#quack #logo {
+    width: 20%;
+}
+
+#quack #webappdemo {
+    width: 35%;
+    left: 20%;
+    padding-top: 10%;
+}
+
+#quack #mobiledemo {
+    width: 15%;
+    left: 80%;
+    padding-top: 8%;
+}
+
+#eatout {
+    z-index: -2;
+    background-color: rgb(63, 63, 63);
+}
+
+#haveyouheard {
+    z-index: -3;
+    background-color: rgb(214, 11, 11);
+}
+
+#end {
+    z-index: -3;
+    background-color: rgb(214, 11, 11);
+    margin-top: -10%;
+    padding-bottom: 10%;
+}
+
+#footer {
+    z-index: 0;
+    padding: 1%;
 }

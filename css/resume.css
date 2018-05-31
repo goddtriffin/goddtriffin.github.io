@@ -1,5 +1,12 @@
 #links {
-    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 30%;
+    margin-left: 35% !important;
+    margin-right: 35% !important;
 }
 
 #pngResume {
