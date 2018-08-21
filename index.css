@@ -13,10 +13,16 @@
     src: url(res/fonts/PermanentMarker-Regular.ttf);
 }
 
+@font-face {
+    font-family: SigmarOne;
+    src: url(res/fonts/SigmarOne-Regular.ttf);
+}
+
 body {
     background-color: #f8f8f8;
     text-align: center;
     font-family: helvetica;
+    color: #111;
 
     display: grid;
     grid-gap: 10px;
@@ -37,11 +43,7 @@ body {
     grid-area: name;
 
     font-family: ShadowsIntoLight;
-
-    font-weight: 300;
-    font-style: normal;
     font-size: 20px;
-    line-height: 1.2em;
     letter-spacing: .4em;
     text-transform: uppercase;
 }
@@ -50,16 +52,10 @@ body {
     grid-area: phrase;
 
     font-family: GloriaHallelujah;
-
-    margin-top: 4%;
-    margin-bottom: 4%;
     font-size: 16px;
-    font-weight: 400;
     font-style: italic;
-    line-height: 1.3em;
-    letter-spacing: 0em;
-    text-transform: none;
-    color: #111;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 #options {
@@ -81,12 +77,61 @@ body {
 .project {
     border-radius: 5px;
     font-size: 150%;
+
+    position: relative;
+    text-align: center;
 }
 
 .project > a > img {
+    opacity: 1;
+
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.project > a > .title {
+    opacity: 0;
+    
+    font-family: SigmarOne;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(75, 75, 75);
+}
+
+.project:hover > a > img {
+    opacity: 0.3;
+}
+
+.project:hover > a > .title {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #111;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #111;
+}
+
+a:focus {
+    text-decoration: none;
+    color: #111;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: #111;
 }
 
 /* mobile */
@@ -130,28 +175,4 @@ body {
         margin-left: 7%;
         margin-right: 7%;
     }
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: none;
-    color: black;
-}
-
-a:focus {
-    text-decoration: none;
-    color: black;
-}
-a:hover, a:active {
-    text-decoration: none;
-    color: black;
 }
