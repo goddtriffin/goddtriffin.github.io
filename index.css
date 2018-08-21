@@ -1,3 +1,18 @@
+@font-face {
+    font-family: ShadowsIntoLight;
+    src: url(res/fonts/ShadowsIntoLight.ttf);
+}
+
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url(res/fonts/GloriaHallelujah.ttf);
+}
+
+@font-face {
+    font-family: PermanentMarker;
+    src: url(res/fonts/PermanentMarker-Regular.ttf);
+}
+
 body {
     background-color: #f8f8f8;
     text-align: center;
@@ -21,9 +36,11 @@ body {
 #name {
     grid-area: name;
 
+    font-family: ShadowsIntoLight;
+
     font-weight: 300;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.2em;
     letter-spacing: .4em;
     text-transform: uppercase;
@@ -31,6 +48,8 @@ body {
 
 #phrase {
     grid-area: phrase;
+
+    font-family: GloriaHallelujah;
 
     margin-top: 4%;
     margin-bottom: 4%;
@@ -44,10 +63,11 @@ body {
 }
 
 #options {
-    grid-area: options;
+    font-family: PermanentMarker;
+}
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
+#options > a {
+    margin-right: 20px;
 }
 
 #portfolio {
@@ -75,12 +95,16 @@ body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "name"
-            "options"
-            "phrase";
+            "phrase"
+            "options";
+    }
+
+    #phrase {
+        font-size: 14px;
     }
 
     #options {
-        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     #portfolio {
@@ -106,4 +130,28 @@ body {
         margin-left: 7%;
         margin-right: 7%;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:focus {
+    text-decoration: none;
+    color: black;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: black;
 }
