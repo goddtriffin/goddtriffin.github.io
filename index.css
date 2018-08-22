@@ -72,6 +72,10 @@ body {
     transition: opacity 0.1s;
 }
 
+#optionResume {
+    opacity: 0.5;
+}
+
 #optionAbout {
     opacity: 0.5;
 }

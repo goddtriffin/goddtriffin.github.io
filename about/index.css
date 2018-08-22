@@ -66,6 +66,10 @@ body {
     opacity: 0.5;
 }
 
+#optionResume {
+    opacity: 0.5;
+}
+
 #options > a:hover {
     opacity: 1.0;
 }
