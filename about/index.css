@@ -43,7 +43,6 @@ body {
     grid-area: name;
 
     font-family: ShadowsIntoLight;
-    font-size: 20px;
     letter-spacing: .4em;
     text-transform: uppercase;
 }
@@ -139,6 +138,10 @@ a:hover, a:active {
             "social";
     }
 
+    #name {
+        font-size: 25px;
+    }
+
     #options {
         margin-bottom: 2%;
     }
@@ -156,6 +159,10 @@ a:hover, a:active {
         grid-template-areas:
             "options name ..."
             "social social social";
+    }
+
+    #name {
+        font-size: 30px;
     }
 
     .profilePicture {

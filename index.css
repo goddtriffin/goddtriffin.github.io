@@ -43,7 +43,6 @@ body {
     grid-area: name;
 
     font-family: ShadowsIntoLight;
-    font-size: 20px;
     letter-spacing: .4em;
     text-transform: uppercase;
 }
@@ -52,7 +51,7 @@ body {
     grid-area: phrase;
 
     font-family: GloriaHallelujah;
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -168,6 +167,10 @@ a:hover, a:active {
             "options";
     }
 
+    #name {
+        font-size: 25px;
+    }
+
     #phrase {
         font-size: 14px;
     }
@@ -191,6 +194,10 @@ a:hover, a:active {
         grid-template-areas:
             "options name ..."
             "phrase phrase phrase";
+    }
+
+    #name {
+        font-size: 30px;
     }
 
     #portfolio {
