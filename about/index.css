@@ -70,6 +70,17 @@ body {
     opacity: 1.0;
 }
 
+#social {
+    grid-area: social;
+
+    color: #111;
+    margin-top: 3%;
+}
+
+#social i {
+    letter-spacing: .3em;
+}
+
 #about {
     grid-area: about;
 
@@ -79,7 +90,6 @@ body {
 
 #profilePicture {
     box-shadow: 0px 0px 25px grey;
-    margin-bottom: 20px;
 }
 
 #profilePictureFader {
@@ -121,7 +131,8 @@ a:hover, a:active {
         grid-template-columns: 1fr;
         grid-template-areas:
             "name"
-            "options";
+            "options"
+            "social";
     }
 
     #options {
@@ -139,7 +150,8 @@ a:hover, a:active {
     #header {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "options name ...";
+            "options name ..."
+            "social social social";
     }
 
     .profilePicture {
