@@ -1,0 +1,117 @@
+@font-face {
+    font-family: ShadowsIntoLight;
+    src: url(../res/fonts/ShadowsIntoLight.ttf);
+}
+
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url(../res/fonts/GloriaHallelujah.ttf);
+}
+
+@font-face {
+    font-family: PermanentMarker;
+    src: url(../res/fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../res/fonts/Roboto-Medium.ttf);
+}
+
+body {
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: helvetica;
+    color: #111;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header";
+}
+
+#header {
+    grid-area: header;
+
+    display: grid;
+    margin-top: 3%;
+}
+
+#name {
+    grid-area: name;
+
+    font-family: ShadowsIntoLight;
+    font-size: 20px;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+}
+
+#options {
+    font-family: PermanentMarker;
+}
+
+#options > a {
+    margin-right: 20px;
+
+    -webkit-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -ms-transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+#optionPortfolio {
+    opacity: 0.5;
+}
+
+#options > a:hover {
+    opacity: 1.0;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #111;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #111;
+}
+
+a:focus {
+    text-decoration: none;
+    color: #111;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: #111;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+    #header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "name"
+            "options";
+    }
+
+    #options {
+        margin-bottom: 2%;
+    }
+}
+
+/* desktop */
+@media (min-width: 900px) {
+    #header {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "options name ...";
+    }
+}
