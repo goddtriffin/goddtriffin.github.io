@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: SigmarOne;
-    src: url(res/fonts/SigmarOne-Regular.ttf);
+    font-family: Roboto;
+    src: url(res/fonts/Roboto-Medium.ttf);
 }
 
 body {
@@ -64,6 +64,20 @@ body {
 
 #options > a {
     margin-right: 20px;
+
+    -webkit-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -ms-transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+#optionAbout {
+    opacity: 0.5;
+}
+
+#options > a:hover {
+    opacity: 1.0;
 }
 
 #portfolio {
@@ -88,13 +102,19 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
 }
 
 .project > a > .title {
     opacity: 0;
     
-    font-family: SigmarOne;
-    font-size: 40px;
+    font-family: Roboto;
+    font-size: 35px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -103,7 +123,7 @@ body {
 }
 
 .project:hover > a > img {
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .project:hover > a > .title {
