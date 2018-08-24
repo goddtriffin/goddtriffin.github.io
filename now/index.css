@@ -4,18 +4,8 @@
 }
 
 @font-face {
-    font-family: GloriaHallelujah;
-    src: url(../res/fonts/GloriaHallelujah.ttf);
-}
-
-@font-face {
     font-family: PermanentMarker;
     src: url(../res/fonts/PermanentMarker-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url(../res/fonts/Roboto-Medium.ttf);
 }
 
 @font-face {
