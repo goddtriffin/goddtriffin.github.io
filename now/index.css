@@ -1,21 +1,26 @@
 @font-face {
     font-family: ShadowsIntoLight;
-    src: url(res/fonts/ShadowsIntoLight.ttf);
+    src: url(../res/fonts/ShadowsIntoLight.ttf);
 }
 
 @font-face {
     font-family: GloriaHallelujah;
-    src: url(res/fonts/GloriaHallelujah.ttf);
+    src: url(../res/fonts/GloriaHallelujah.ttf);
 }
 
 @font-face {
     font-family: PermanentMarker;
-    src: url(res/fonts/PermanentMarker-Regular.ttf);
+    src: url(../res/fonts/PermanentMarker-Regular.ttf);
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(res/fonts/Roboto-Medium.ttf);
+    src: url(../res/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Cardo;
+    src: url(../res/fonts/Cardo-Regular.ttf);
 }
 
 a {
@@ -53,7 +58,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas:
         "header"
-        "portfolio";
+        "now";
 }
 
 #header {
@@ -71,16 +76,6 @@ body {
     text-transform: uppercase;
 }
 
-#phrase {
-    grid-area: phrase;
-
-    font-family: GloriaHallelujah;
-    font-size: 18px;
-    font-style: italic;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
 #options {
     font-family: PermanentMarker;
 }
@@ -95,6 +90,10 @@ body {
     transition: opacity 0.1s;
 }
 
+#optionPortfolio {
+    opacity: 0.5;
+}
+
 #optionResume {
     opacity: 0.5;
 }
@@ -103,62 +102,44 @@ body {
     opacity: 0.5;
 }
 
-#optionNow {
-    opacity: 0.5;
-}
-
 #options > a:hover {
     opacity: 1.0;
 }
 
-#portfolio {
-    grid-area: portfolio;
-
-    display: grid;
-    grid-gap: 15px;
-    margin-bottom: 5%;
+#now {
+    font-family: Cardo;
 }
 
-.project {
-    border-radius: 5px;
-    font-size: 150%;
+#title {
+    font-size: 50px;
 
-    position: relative;
-    text-align: center;
+    padding: 0px;
+    margin-top: 3%;
+    margin-bottom: 0px;
 }
 
-.project > a > img {
-    opacity: 1;
-
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -ms-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+#lastUpdated {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 15px;
 }
 
-.project > a > .title {
-    opacity: 0;
-    
-    font-family: Roboto;
-    font-size: 35px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(75, 75, 75);
+#lastUpdated span {
+    text-decoration: italic;
 }
 
-.project:hover > a > img {
-    opacity: 0.4;
+#desc {
+    font-size: 15px;
+
+    margin: 0px;
 }
 
-.project:hover > a > .title {
-    opacity: 1;
+#now a {
+    border-bottom: 1px solid #000;
+}
+
+#now a:hover {
+    border-bottom: none;
 }
 
 /* mobile */
@@ -167,7 +148,6 @@ body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "name"
-            "phrase"
             "options";
     }
 
@@ -175,19 +155,16 @@ body {
         font-size: 25px;
     }
 
-    #phrase {
-        font-size: 14px;
-    }
-
     #options {
         margin-bottom: 2%;
     }
 
-    #portfolio {
-        grid-template-columns: minmax(100px, 1fr);
-        grid-auto-rows: 250px;
-        margin-left: 4%;
-        margin-right: 4%;
+    #desc {
+        margin-bottom: 15%;
+    }
+
+    #now > div {
+        margin-bottom: 8%;
     }
 }
 
@@ -196,18 +173,18 @@ body {
     #header {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "options name ..."
-            "phrase phrase phrase";
+            "options name ...";
     }
 
     #name {
         font-size: 30px;
     }
 
-    #portfolio {
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
-        grid-auto-rows: 500px;
-        margin-left: 7%;
-        margin-right: 7%;
+    #desc {
+        margin-bottom: 4%;
+    }
+
+    #now > div {
+        margin-bottom: 2%;
     }
 }
