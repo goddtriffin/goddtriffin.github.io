@@ -4,18 +4,13 @@
 }
 
 @font-face {
-    font-family: GloriaHallelujah;
-    src: url(../res/fonts/GloriaHallelujah.ttf);
-}
-
-@font-face {
     font-family: PermanentMarker;
     src: url(../res/fonts/PermanentMarker-Regular.ttf);
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url(../res/fonts/Roboto-Medium.ttf);
+    font-family: Cardo;
+    src: url(../res/fonts/Cardo-Regular.ttf);
 }
 
 a {
@@ -112,11 +107,20 @@ body {
     letter-spacing: .3em;
 }
 
+#title {
+    font-family: Cardo;
+    font-size: 50px;
+
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3%;
+    margin-bottom: 0px;
+}
+
 #about {
     grid-area: about;
 
     margin-top: 5%;
-    margin-bottom: 5%;
 }
 
 #profilePicture {
