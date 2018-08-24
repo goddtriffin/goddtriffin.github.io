@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(function() {
         updateProfilePicture();
-    }, 8000);
+    }, 5000);
 }, false);
 
 function getProfilePictureShowOrder() {
