@@ -145,12 +145,8 @@ body {
         font-size: 25px;
     }
 
-    #options {
-        margin-bottom: 2%;
-    }
-
     #desc {
-        margin-bottom: 15%;
+        margin-bottom: 10%;
     }
 
     #now > div {
