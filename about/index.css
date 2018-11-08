@@ -1,16 +1,16 @@
 @font-face {
     font-family: ShadowsIntoLight;
-    src: url(../res/fonts/ShadowsIntoLight.ttf);
+    src: url(../res/font/ShadowsIntoLight.ttf);
 }
 
 @font-face {
     font-family: PermanentMarker;
-    src: url(../res/fonts/PermanentMarker-Regular.ttf);
+    src: url(../res/font/PermanentMarker-Regular.ttf);
 }
 
 @font-face {
     font-family: Cardo;
-    src: url(../res/fonts/Cardo-Regular.ttf);
+    src: url(../res/font/Cardo-Regular.ttf);
 }
 
 a {

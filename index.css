@@ -1,21 +1,21 @@
 @font-face {
     font-family: ShadowsIntoLight;
-    src: url(res/fonts/ShadowsIntoLight.ttf);
+    src: url(res/font/ShadowsIntoLight.ttf);
 }
 
 @font-face {
     font-family: GloriaHallelujah;
-    src: url(res/fonts/GloriaHallelujah.ttf);
+    src: url(res/font/GloriaHallelujah.ttf);
 }
 
 @font-face {
     font-family: PermanentMarker;
-    src: url(res/fonts/PermanentMarker-Regular.ttf);
+    src: url(res/font/PermanentMarker-Regular.ttf);
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(res/fonts/Roboto-Medium.ttf);
+    src: url(res/font/Roboto-Medium.ttf);
 }
 
 a {
