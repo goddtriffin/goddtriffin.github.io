@@ -71,6 +71,11 @@ body {
     text-transform: uppercase;
 }
 
+#name > a > p {
+    margin: 0;
+    padding: 0;
+}
+
 #phrase {
     grid-area: phrase;
 
@@ -172,7 +177,7 @@ body {
     }
 
     #name {
-        font-size: 25px;
+        font-size: 2em;
     }
 
     #phrase {
@@ -201,7 +206,7 @@ body {
     }
 
     #name {
-        font-size: 30px;
+        font-size: 2.5em;
     }
 
     #portfolio {
