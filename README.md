@@ -1,3 +1,3 @@
 # magnusfrater.github.io
 
-My current personal website.
+[DEPRECATED] My current personal website.
